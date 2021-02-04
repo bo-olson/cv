@@ -1,0 +1,166 @@
+---
+title: "Bo Olson"
+author: Bo Olson
+output: 
+  pagedown::html_resume:
+    css: ['resume_css.css', 'resume']
+#knit: pagedown::chrome_print
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r libraries used, warning=FALSE, echo=FALSE, message=FALSE}
+
+library(pagedown)
+library(tidyverse)
+
+```
+
+
+::: aside
+
+Contact {#contact}
+--------------------------------------
+
+<i class="fa fa-envelope"></i> bo.olson@gmail.com
+
+<i class="fa fa-phone"></i> 847.224.4208
+
+<i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/OlsonBo">linkedin.com/in/OlsonBo</a>
+
+<i class="fa fa-map-marker-alt"></i> Seattle, WA
+
+Technical Skills {#skills}
+---------------------------------------
+
+```{r skill plot, warning=FALSE, echo=FALSE, message=FALSE, fig.height=10, fig.width=7}
+
+skill<-c("R", "SQL", "Azure Platform & ETL", "Databricks / Spark", "Python", "Data Visualization (GGplot / PowerBI)")
+level<-c(9,10,10,7,5,10)
+wes <- wesanderson::wes_palette("Zissou1", type = "continuous", n=6)
+skills <- data_frame(skill = skill,
+                     level = level)
+
+skills %>% ggplot(aes(reorder(skill, level), level)) + 
+              geom_col(aes(fill=skill)) + 
+                coord_flip() +
+                  scale_fill_manual(values = wes) +
+                    theme_void() +
+                      theme(
+                        legend.position = "none",
+                        panel.border = element_blank(),
+                        panel.background = element_rect(fill = "#e9edc9", color = "#e9edc9"),
+                          ) +
+              geom_text(aes(skill, 0, label=skill, group = skill),
+                        nudge_y = .25,
+                        hjust = 0,
+                        family = "Gill Sans",
+                        size = 10,
+                        color = "white")
+```
+
+
+Interests
+---------------------------------------
+
+Avid fly fisher, outdoor wanderer, dog walker, paddler and rower, guitar picker, and poem reader.
+
+<br><br><br>
+
+Disclaimer
+---------------------------------------
+
+Built using the awesome <a href="https://github.com/rstudio/pagedown#resume-pagedownhtml_resume">pagedown</a> package
+
+See the source code on my <a href="https://github.com/bo-olson/cv/">github</a>
+
+:::
+
+Main
+=======================================
+
+Bo Olson {#title}
+---------------------------------------
+
+I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obession with communicating results beautifully. 
+
+I value empathy in design and communication, and I aspire to connect data-driven insights to human experience.
+
+
+Experience {data-icon=briefcase}
+--------------------------------------------------------------------------------
+
+### <i class="fa fa-chart-area"></i> Marketing Analytics Manager 
+
+Microsoft | US Central Marketing Organization
+
+Bellevue, WA
+
+Current - 2016
+
+- Development of enterprise machine learning solutions for US field marketing
+- Active work: marketing program recommender algorithms, boosted tree-based targeting models, spend optimization and causal impact models
+- Development and maintenance of data pipelines, visual dashboards for hundreds of internal users in sales and marketing
+
+
+### <i class="fa fa-chart-area"></i> Marketing Program Manager
+
+Yesler | Client: Microsoft Enterprise Marketing
+
+Seattle, WA
+
+2016 - 2014
+
+- Supported Microsoft Enterprise Marketing through reporting platform development
+- Development of SSIS, SSAS, PowerBI stack and visual layer
+
+
+### <i class="fa fa-book-open"></i> Site Merchandiser - Books
+
+Amazon
+
+Seattle, WA
+
+2014 - 2013
+
+- Owned marketing program strategy for a "Big 5" publisher account
+- Data analysis, modeling, customer behavior testing
+- Merchandising strategy for high-traffic specialty stores & seasonal events
+
+### <i class="fa fa-coffee"></i> Director of Sales
+
+The Tea Spot
+
+Boulder, CO
+
+2013 - 2009
+
+- Managed wholesale sales department
+- Product development, public speaking at industry events
+
+Education {data-icon=university}
+--------------------------------------------------------------------------------
+
+### <i class = "fa fa-pen-fancy"></i> Bachelor of English, Creative Writing
+
+University of Colorado
+
+Boulder, CO
+
+2010 - 2006
+
+- Concentration in Poetry
+- Editor: Honors Journal (Poetry), Walkabout Arts Journal
+
+
+
+
+
+
+
+
+
+
+
+
+

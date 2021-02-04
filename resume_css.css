@@ -1,0 +1,74 @@
+
+/*
+ * CSS Style Sheet for Resume
+ *
+ * Adapted from https://github.com/poole/hyde.
+ *
+ */
+
+/*
+ * Global settings for page
+ *
+ */
+ 
+body {
+  font-family: "Gill Sans";
+  
+  
+}   
+
+
+
+.aside {
+    width: var(--sidebar-width);
+    padding: 0.15in var(--sidebar-horizontal-padding);
+}
+
+:root {
+  --sidebar-background-color: #e9edc9;
+  --root-font-size: 12pt;
+
+}
+
+.pagedjs_page {
+  
+    --pagedjs-margin-left: 0in !important;
+}
+
+[data-id="main"] {
+  font-size: 0.9rem;  
+}
+
+.pagedjs_page {
+  --pagedjs-margin-top: .5in !important;
+}
+
+li {
+    list-style-type: none;
+    font-size: .8rem;
+}
+
+.details .location {
+    float: right;
+    font-size: 8pt !important;
+    padding-bottom: .5rem;
+}
+
+[data-id="disclaimer"] {
+    position: absolute;
+    bottom: -200px;
+}
+
+.details h3 {
+    font-size: 0.8rem;
+    font-family: "Gill Sans";
+    font-weight: 500;
+}
+
+a {
+color: black !important;
+}
+
+a:hover {
+color: white !important;
+}

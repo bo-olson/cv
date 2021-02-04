@@ -4,14 +4,14 @@ author: Bo Olson
 output: 
   pagedown::html_resume:
     css: ['resume_css.css', 'resume']
-knit: pagedown::chrome_print
+#knit: pagedown::chrome_print
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r global options, include = FALSE}
 
-knitr::opts_chunk$set (echo = FALSE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set (echo = FALSE, warning = FALSE, message = FALSE, dev.args=list(bg="transparent"))
 
 ```
 
@@ -44,7 +44,7 @@ data %>% ggplot(aes(x =density, y = as.factor(label), fill = factor(label))) +
                       scale_fill_manual(values = wes)+
                       theme_void()+
                       theme(legend.position = "none",
-                            panel.background = element_rect(fill = "#D5DCBC", color = "#D5DCBC"))
+                            panel.background = element_rect(fill = "transparent", color = NA))
 
 
 ```
@@ -85,7 +85,7 @@ skills %>% ggplot(aes(reorder(skill, level), level)) +
                       theme(
                         legend.position = "none",
                         panel.border = element_blank(),
-                        panel.background = element_rect(fill = "#D5DCBC", color = "#D5DCBC")
+                        panel.background = element_rect(fill = "transparent", color = NA)
                           ) +
               geom_text(aes(skill, 0, label=skill, group = skill),
                         nudge_y = .25,

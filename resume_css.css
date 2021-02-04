@@ -24,10 +24,22 @@ body {
     padding: 0.15in var(--sidebar-horizontal-padding);
 }
 
+[data-id="title"] h1 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
 :root {
-  --sidebar-background-color: #e9edc9;
+  --sidebar-background-color: #D5DCBC;
   --root-font-size: 12pt;
 
+}
+
+.densityplot{
+  top: 10px;
+  right: 50px;
+  position: fixed;
 }
 
 .pagedjs_page {

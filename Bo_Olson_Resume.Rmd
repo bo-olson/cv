@@ -4,18 +4,52 @@ author: Bo Olson
 output: 
   pagedown::html_resume:
     css: ['resume_css.css', 'resume']
-#knit: pagedown::chrome_print
+knit: pagedown::chrome_print
 editor_options: 
   chunk_output_type: console
 ---
 
-```{r libraries used, warning=FALSE, echo=FALSE, message=FALSE}
+```{r global options, include = FALSE}
 
-library(pagedown)
-library(tidyverse)
+knitr::opts_chunk$set (echo = FALSE, warning = FALSE, message = FALSE)
 
 ```
 
+```{r libraries used }
+
+library(pagedown)
+library(tidyverse)
+library(ggridges)
+library(wesanderson)
+library(viridis)
+
+```
+
+<div class = "densityplot">
+
+```{r fun density plot, fig.height=.75, fig.width=2, fig.align='right'}
+
+
+wes <- wesanderson::wes_palette("Royal1", type = "continuous", n=12)
+
+data <- data_frame(label = 1, density = c(rnorm(100, mean = 7))) %>% 
+          union(data_frame(label = 5, density = c(rnorm(100, mean = 6)))) %>% 
+          union(data_frame(label = 6, density = c(rnorm(100, mean = 5)))) %>% 
+          union(data_frame(label = 7, density = c(rnorm(100, mean = 4)))) %>% 
+          union(data_frame(label = 8, density = c(rnorm(100, mean = 3)))) %>% 
+          union(data_frame(label = 9, density = c(rnorm(100, mean = 2)))) 
+
+data %>% ggplot(aes(x =density, y = as.factor(label), fill = factor(label))) + 
+                  geom_density_ridges(scale = 2, height =.5, color = "#D5DCBC") + 
+                      scale_fill_manual(values = wes)+
+                      theme_void()+
+                      theme(legend.position = "none",
+                            panel.background = element_rect(fill = "#D5DCBC", color = "#D5DCBC"))
+
+
+```
+
+</div>
 
 ::: aside
 
@@ -28,28 +62,30 @@ Contact {#contact}
 
 <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/OlsonBo">linkedin.com/in/OlsonBo</a>
 
-<i class="fa fa-map-marker-alt"></i> Seattle, WA
+<!-- hope you like my joke -->
+
+<i class="fa fa-map-marker-alt"></i> <a href="https://www.seattletimes.com/seattle-news/flying-fish-fries-power-for-dozens-of-seattle-city-light-customers/" target="_blank">Seattle, WA</a>
 
 Technical Skills {#skills}
 ---------------------------------------
 
-```{r skill plot, warning=FALSE, echo=FALSE, message=FALSE, fig.height=10, fig.width=7}
+```{r skill plot, fig.height=10, fig.width=7}
 
-skill<-c("R", "SQL", "Azure Platform & ETL", "Databricks / Spark", "Python", "Data Visualization (GGplot / PowerBI)")
+skill<-c("R", "SQL", "Azure Platform & ETL", "Databricks / Spark", "Python", "Data Visualization (ggplot / PowerBI)")
 level<-c(9,10,10,7,5,10)
-wes <- wesanderson::wes_palette("Zissou1", type = "continuous", n=6)
+wes <- wesanderson::wes_palette("Royal1", type = "continuous", n=6)
 skills <- data_frame(skill = skill,
                      level = level)
 
 skills %>% ggplot(aes(reorder(skill, level), level)) + 
-              geom_col(aes(fill=skill)) + 
+              geom_col(aes(fill = wes[[2]])) + 
                 coord_flip() +
-                  scale_fill_manual(values = wes) +
+                  scale_fill_manual(values = wes[[2]]) +
                     theme_void() +
                       theme(
                         legend.position = "none",
                         panel.border = element_blank(),
-                        panel.background = element_rect(fill = "#e9edc9", color = "#e9edc9"),
+                        panel.background = element_rect(fill = "#D5DCBC", color = "#D5DCBC")
                           ) +
               geom_text(aes(skill, 0, label=skill, group = skill),
                         nudge_y = .25,
@@ -82,9 +118,9 @@ Main
 Bo Olson {#title}
 ---------------------------------------
 
-I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obession with communicating results beautifully. 
+I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obession with communicating results beautifully. I'm experienced in driving a data team from descriptive to prescriptive analytics, and bringing stakeholders along for the journey. 
 
-I value empathy in design and communication, and I aspire to connect data-driven insights to human experience.
+I value empathy in design and communication, and I view analytics and data science as a service meant to improve the daily lives of my peers.
 
 
 Experience {data-icon=briefcase}
@@ -99,13 +135,13 @@ Bellevue, WA
 Current - 2016
 
 - Development of enterprise machine learning solutions for US field marketing
-- Active work: marketing program recommender algorithms, boosted tree-based targeting models, spend optimization and causal impact models
+- Active work: marketing program recommender algorithms, boosted tree-based targeting models, spend optimization and causal inference models
 - Development and maintenance of data pipelines, visual dashboards for hundreds of internal users in sales and marketing
 
 
 ### <i class="fa fa-chart-area"></i> Marketing Program Manager
 
-Yesler | Client: Microsoft Enterprise Marketing
+Yesler
 
 Seattle, WA
 
@@ -135,7 +171,7 @@ Boulder, CO
 
 2013 - 2009
 
-- Managed wholesale sales department
+- Managed wholesale sales department 
 - Product development, public speaking at industry events
 
 Education {data-icon=university}

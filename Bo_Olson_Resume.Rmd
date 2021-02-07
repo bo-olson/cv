@@ -25,9 +25,10 @@ library(viridis)
 
 ```
 
+
 <div class = "densityplot">
 
-```{r fun density plot, fig.height=.75, fig.width=2, fig.align='right'}
+```{r fun density plot, fig.height=.5, fig.width=2, fig.align='right'}
 
 
 wes <- wesanderson::wes_palette("Royal1", type = "continuous", n=12)
@@ -66,13 +67,18 @@ Contact {#contact}
 
 <i class="fa fa-map-marker-alt"></i> <a href="https://www.seattletimes.com/seattle-news/flying-fish-fries-power-for-dozens-of-seattle-city-light-customers/" target="_blank">Seattle, WA</a>
 
+<i>View html with links at my github: 
+
+https://github.com/bo-olson/cv/ </i>
+
+
 Technical Skills {#skills}
 ---------------------------------------
 
-```{r skill plot, fig.height=10, fig.width=7}
+```{r skill plot, fig.height=15, fig.width=10}
 
-skill<-c("R", "SQL", "Azure Platform & ETL", "Databricks / Spark", "Python", "Data Visualization (ggplot / PowerBI)")
-level<-c(9,10,10,7,5,10)
+skill<-c("R", "SQL", "Azure Platform & ETL", "Databricks & Spark", "Python", "Data Visualization (ggplot / PowerBI)", "HTML & CSS")
+level<-c(9,10,10,7,6,10,5)
 wes <- wesanderson::wes_palette("Royal1", type = "continuous", n=6)
 skills <- data_frame(skill = skill,
                      level = level)
@@ -91,9 +97,10 @@ skills %>% ggplot(aes(reorder(skill, level), level)) +
                         nudge_y = .25,
                         hjust = 0,
                         family = "Gill Sans",
-                        size = 10,
+                        size = 14,
                         color = "white")
 ```
+
 
 
 Interests
@@ -101,7 +108,7 @@ Interests
 
 Avid fly fisher, outdoor wanderer, dog walker, paddler and rower, guitar picker, and poem reader.
 
-<br><br><br>
+
 
 Disclaimer
 ---------------------------------------
@@ -109,6 +116,7 @@ Disclaimer
 Built using the awesome <a href="https://github.com/rstudio/pagedown#resume-pagedownhtml_resume">pagedown</a> package
 
 See the source code on my <a href="https://github.com/bo-olson/cv/">github</a>
+
 
 :::
 
@@ -118,61 +126,69 @@ Main
 Bo Olson {#title}
 ---------------------------------------
 
-I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obession with communicating results beautifully. I'm experienced in driving a data team from descriptive to prescriptive analytics, and bringing stakeholders along for the journey. 
+I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obession with communicating results beautifully. 
 
-I value empathy in design and communication, and I view analytics and data science as a service meant to improve the daily lives of my peers.
-
+I'm experienced in driving a data team from descriptive to prescriptive analytics, and bringing stakeholders along for the journey. 
 
 Experience {data-icon=briefcase}
 --------------------------------------------------------------------------------
 
-### <i class="fa fa-chart-area"></i> Marketing Analytics Manager 
+### <i class="fa fa-chart-area"></i> Microsoft 
 
-Microsoft | US Central Marketing Organization
+Marketing Analytics Manager: US Central Marketing Organization
 
 Bellevue, WA
 
 Current - 2016
 
-- Development of enterprise machine learning solutions for US field marketing
-- Active work: marketing program recommender algorithms, boosted tree-based targeting models, spend optimization and causal inference models
+- Development of enterprise machine learning solutions for US field marketing:
+  + Real-time marketing program recommendations for each account driven by custom models, optimized to drive marketing impact on revenue by 2x - 5x
+  + Boosted tree-based models to provide annual contacts engagement targets for MSUS field marketers and ETL/Dashboards to track success against these targets daily
+  + GMM/EM Clustering to identify account growth patterns and stratify other models
+  + Spend optimization and causal inference models to measure successful customer investment funds and provide real-time recommendations 
 - Development and maintenance of data pipelines, visual dashboards for hundreds of internal users in sales and marketing
+  + Deep experience in SQL Server/SSIS/SSAS, Azure Data Factory & Storage, Databricks, and PowerBI to drive daily insights
 
 
-### <i class="fa fa-chart-area"></i> Marketing Program Manager
+### <i class="fa fa-chart-area"></i> Yesler 
 
-Yesler
+Marketing Program Manager
 
 Seattle, WA
 
 2016 - 2014
 
-- Supported Microsoft Enterprise Marketing through reporting platform development
-- Development of SSIS, SSAS, PowerBI stack and visual layer
+- Supported Microsoft Enterprise Marketing through reporting platform development:
+  + Established KPIs and best practices for email nurture, web traffic, and sales engagement reporting
+  + Built and managed 30+ PowerBI dashboards to measure success
+  + Development and management of SSIS, SSAS, PowerBI stack
 
 
-### <i class="fa fa-book-open"></i> Site Merchandiser - Books
+### <i class="fa fa-book-open"></i> Amazon
 
-Amazon
+Site Merchandiser - Books
 
 Seattle, WA
 
 2014 - 2013
 
-- Owned marketing program strategy for a "Big 5" publisher account
+- Owned marketing program strategy for a "Big 5" publisher account, helped generate MM dollar growth of +20% YoY
 - Data analysis, modeling, customer behavior testing
+- Workflow modeling and marketing automation improvements to generate team-wide time savings of over 200hrs / month
 - Merchandising strategy for high-traffic specialty stores & seasonal events
 
-### <i class="fa fa-coffee"></i> Director of Sales
+### <i class="fa fa-coffee"></i> The Tea Spot
 
-The Tea Spot
+Director of Sales
 
 Boulder, CO
 
 2013 - 2009
 
-- Managed wholesale sales department 
-- Product development, public speaking at industry events
+- Managed wholesale sales department, generated leads and sales in Grocery, Retail & Foodservice, bringing startup into profitability
+- Brand & product development, public speaking at industry events
+- Copywriting for marketing materials, retail packaging and branding concepts
+- Feature Speaker at World Tea Expos 2012, 2013
 
 Education {data-icon=university}
 --------------------------------------------------------------------------------
@@ -187,8 +203,8 @@ Boulder, CO
 
 - Concentration in Poetry
 - Editor: Honors Journal (Poetry), Walkabout Arts Journal
-
-
+- Awards: Jovanovich Award in Poetry (2009), Featured Writer: Cornell’s <i>Rainy Day, 2009 Ed.</i>
+- Cohead of the Fly Fishing Club
 
 
 

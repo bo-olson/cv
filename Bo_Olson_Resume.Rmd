@@ -126,7 +126,7 @@ Main
 Bo Olson {#title}
 ---------------------------------------
 
-I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obession with communicating results beautifully. 
+I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obsession with communicating results beautifully. 
 
 I'm experienced in driving a data team from descriptive to prescriptive analytics, and bringing stakeholders along for the journey. 
 

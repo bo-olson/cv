@@ -78,7 +78,7 @@ Technical Skills {#skills}
 ```{r skill plot, fig.height=15, fig.width=10}
 
 skill<-c("R", "SQL", "Azure Platform & ETL", "Databricks & Spark", "Python", "Data Visualization (ggplot / PowerBI)", "HTML & CSS")
-level<-c(9,10,10,7,6,10,5)
+level<-c(10,10,10,7,6,10,5)
 wes <- wesanderson::wes_palette("Royal1", type = "continuous", n=6)
 skills <- data_frame(skill = skill,
                      level = level)
@@ -106,7 +106,7 @@ skills %>% ggplot(aes(reorder(skill, level), level)) +
 Interests
 ---------------------------------------
 
-Avid fly fisher, outdoor wanderer, dog walker, paddler and rower, guitar picker, and poem reader.
+Avid fly fisher, outdoor wanderer, dog walker, whitewater rower, guitar picker, and poem reader.
 
 
 
@@ -126,7 +126,7 @@ Main
 Bo Olson {#title}
 ---------------------------------------
 
-I'm a full-stack applied data scientist with strong data engineering skills, a creative mind for building enterprise-level ML solutions, and an obsession with communicating results beautifully. 
+I'm an applied data scientist and analyst with strong data engineering skills, a creative mind for building enterprise-level ML solutions, coaching data literacy, and an obsession with communicating results beautifully. 
 
 I'm experienced in driving a data team from descriptive to prescriptive analytics, and bringing stakeholders along for the journey. 
 
@@ -135,22 +135,22 @@ Experience {data-icon=briefcase}
 
 ### <i class="fa fa-chart-area"></i> Microsoft 
 
-Marketing Analytics Manager: US Central Marketing Organization
+Senior Marketing Analytics Manager: US Central Marketing Organization
 
 Bellevue, WA
 
 Current - 2016
 
 - Development of enterprise machine learning solutions for US field marketing:
-  + Real-time marketing program recommendations for each account driven by custom models, optimized to drive marketing impact on revenue by 2x - 5x
-  + Boosted tree-based models to provide annual contacts engagement targets for MSUS field marketers and ETL/Dashboards to track success against these targets daily
-  + GMM/EM Clustering to identify account growth patterns and stratify other models
-  + Spend optimization and causal inference models to measure successful customer investment funds and provide real-time recommendations 
+  + Identified key KPIs and built ML-based marketing engagement targets to provide USCMO with intelligent goals designed to directly impact revenue, presented in real-time reports used in daily RoB. (<i>What does good look like?</i> I can help with that!)
+  + Real-time marketing program recommendations at the account level driven by custom models, optimized to drive marketing impact on revenue by 2x - 5x
+  + Built, deployed and maintained production models using clustering, linear models, boosted trees, as well as custom implementations to directly address the relevant business problem at hand
+  + Developed spend optimization and causal inference models to measure successful customer investment funds and provide real-time recommendations on spend, working across multiple disciplines and teams
 - Development and maintenance of data pipelines, visual dashboards for hundreds of internal users in sales and marketing
-  + Deep experience in SQL Server/SSIS/SSAS, Azure Data Factory & Storage, Databricks, and PowerBI to drive daily insights
+  + Deep experience in SQL Server/SSIS/SSAS, R/RShiny, Azure Notebooks, Data Factory & Storage, Databricks, and PowerBI to drive daily insights
 
 
-### <i class="fa fa-chart-area"></i> Yesler 
+### <i class="fa fa-chart-area"></i> Yesler <i>(Now Accenture)</i>
 
 Marketing Program Manager
 
